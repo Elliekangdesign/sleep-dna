@@ -46,19 +46,23 @@ function LoadingContent() {
           style={{ background: '#070712' }}>
       {/* Wave animation */}
       <div className="absolute inset-0 flex items-center justify-center">
-        {[0, 1, 2, 3].map((i) => (
+        {[0, 1, 2, 3, 4, 5].map((i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full border border-primary/20"
-            initial={{ width: 40, height: 40, opacity: 0.6 }}
+            className="absolute rounded-full"
+            style={{
+              border: `1.5px solid rgba(108, 142, 255, ${0.35 - i * 0.04})`,
+              boxShadow: `0 0 ${12 + i * 4}px rgba(108, 142, 255, ${0.15 - i * 0.02})`,
+            }}
+            initial={{ width: 20, height: 20, opacity: 0.7 }}
             animate={{
-              width: [40, 300 + i * 80],
-              height: [40, 300 + i * 80],
-              opacity: [0.4, 0],
+              width: [20, 500 + i * 100],
+              height: [20, 500 + i * 100],
+              opacity: [0.6, 0],
             }}
             transition={{
-              duration: 3,
-              delay: i * 0.6,
+              duration: 3.5,
+              delay: i * 0.5,
               repeat: Infinity,
               ease: "easeOut",
             }}
