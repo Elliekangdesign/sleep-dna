@@ -72,21 +72,9 @@ export default function QuizPage() {
   const [unknownTime, setUnknownTime] = useState(false);
   const [answers, setAnswers] = useState<number[]>([]);
 
-  // Load from localStorage
+  // 퀴즈 진입 시 이전 데이터 초기화 (항상 새로 시작)
   useEffect(() => {
-    const saved = localStorage.getItem("sleepDnaQuiz");
-    if (saved) {
-      try {
-        const data = JSON.parse(saved);
-        if (data.name) setName(data.name);
-        if (data.birthYear) setBirthYear(data.birthYear);
-        if (data.birthMonth) setBirthMonth(data.birthMonth);
-        if (data.birthDay) setBirthDay(data.birthDay);
-        if (data.answers) setAnswers(data.answers);
-      } catch {
-        // ignore
-      }
-    }
+    localStorage.removeItem("sleepDnaQuiz");
   }, []);
 
   // Save to localStorage
@@ -110,7 +98,7 @@ export default function QuizPage() {
         const type = calculateSleepType(newAnswers);
         setTimeout(() => {
           router.push(
-            `/loading?type=${type}&name=${encodeURIComponent(name || "당신")}&birthYear=${birthYear}&birthMonth=${birthMonth}&birthDay=${birthDay}`
+            `/analyzing?type=${type}&name=${encodeURIComponent(name || "당신")}&birthYear=${birthYear}&birthMonth=${birthMonth}&birthDay=${birthDay}`
           );
         }, 500);
       } else {
