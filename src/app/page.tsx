@@ -206,7 +206,7 @@ export default function LandingPage() {
               >
                 <div className="text-2xl mb-2">{step.emoji}</div>
                 <h3 className="text-white font-medium mb-1">{step.title}</h3>
-                <p className="text-text-muted text-sm">{step.desc}</p>
+                <p className="text-text-muted text-[15px] leading-[1.7] break-keep">{step.desc}</p>
               </motion.div>
             ))}
           </div>

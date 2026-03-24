@@ -341,7 +341,7 @@ export default function QuizPage() {
                     <button
                       key={idx}
                       onClick={() => handleAnswer(idx)}
-                      className={`text-left min-h-[56px] px-5 py-4 rounded-2xl border transition-all text-sm leading-relaxed
+                      className={`text-left min-h-[56px] px-5 py-4 rounded-2xl border transition-all text-[15px] leading-[1.65] break-keep
                         ${
                           isSelected
                             ? "border-primary bg-primary/10 text-white"

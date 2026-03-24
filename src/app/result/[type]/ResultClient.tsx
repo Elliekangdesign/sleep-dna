@@ -144,7 +144,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
           variants={fadeUp}
           className="bg-surface-bright border-l-2 border-primary rounded-lg p-4 mb-12"
         >
-          <p className="text-text-muted text-sm leading-relaxed">
+          <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
             이 분석은 사주·별자리 기반 기질 데이터와 수면 행동 패턴을 교차
             분석한 리포트예요. 의료 진단이 아니며, 실제 수면 측정
             데이터가 아닙니다. 더 정확한 분석은 앱에서 실제 수면 측정으로
@@ -202,7 +202,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
                 <p className="text-warning text-sm font-medium mb-2">
                   ⚠️ {replaceNamePlaceholder(caution.title, name)}
                 </p>
-                <p className="text-text-muted text-sm leading-relaxed">
+                <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
                   {replaceNamePlaceholder(caution.description, name)}
                 </p>
               </div>
@@ -231,7 +231,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
                 <p className="text-success text-sm font-medium mb-2">
                   ✓ {replaceNamePlaceholder(rec.title, name)}
                 </p>
-                <p className="text-text-muted text-sm leading-relaxed">
+                <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
                   {replaceNamePlaceholder(rec.description, name)}
                 </p>
               </div>
@@ -276,7 +276,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
 
           <div className="bg-surface-bright border-l-2 border-success rounded-lg p-5">
             <p className="text-success text-sm font-medium mb-2">💡 이 시기에 특히</p>
-            <p className="text-text-muted text-sm leading-relaxed break-keep">
+            <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
               {ageGroup.highlight}
             </p>
           </div>
@@ -314,7 +314,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
                 <p className="text-white text-sm font-medium mb-2">
                   {card.emoji} {card.title}
                 </p>
-                <p className="text-text-muted text-sm leading-relaxed break-keep">
+                <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
                   {card.description}
                 </p>
               </div>
@@ -401,7 +401,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
               <p className="text-white text-sm font-medium mb-2">
                 🎙️ 숨소리 기반 정밀 수면 분석
               </p>
-              <p className="text-text-muted text-sm leading-relaxed break-keep">
+              <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
                 자는 동안 스마트폰 마이크가 호흡 패턴을 감지해요. 수면 단계, 각성
                 시간, 수면 효율을 매일 아침 리포트로 받아보세요.
               </p>
@@ -410,7 +410,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
               <p className="text-white text-sm font-medium mb-2">
                 📋 나만의 수면 리포트 + 전문가 상담
               </p>
-              <p className="text-text-muted text-sm leading-relaxed break-keep">
+              <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
                 누적된 수면 데이터를 바탕으로 수면 전문가와 1:1 상담을 받을 수
                 있어요.
               </p>
@@ -419,7 +419,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
               <p className="text-white text-sm font-medium mb-2">
                 🧬 수면 DNA 기질 맞춤 숙면 가이드
               </p>
-              <p className="text-text-muted text-sm leading-relaxed break-keep">
+              <p className="text-text-muted text-[15px] leading-[1.75] break-keep">
                 분석된 수면 기질에 맞는 취침 루틴과 환경 세팅 가이드를 매일
                 업데이트해드려요.
               </p>
