@@ -73,8 +73,8 @@ export default function LandingPage() {
           <Image
             src="/images/cat-logo.jpg"
             alt="수면 DNA"
-            width={200}
-            height={200}
+            width={280}
+            height={280}
             className="rounded-[40px]"
             priority
           />
