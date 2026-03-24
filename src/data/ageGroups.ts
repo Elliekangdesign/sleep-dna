@@ -49,9 +49,22 @@ export const ageGroups: Record<string, AgeGroup> = {
   },
 };
 
-export function getAgeGroup(birthYear: number): AgeGroup {
-  const currentYear = new Date().getFullYear();
-  const age = currentYear - birthYear;
+export function getAgeGroup(
+  birthYear: number,
+  birthMonth?: number,
+  birthDay?: number
+): AgeGroup {
+  const now = new Date();
+  let age = now.getFullYear() - birthYear;
+
+  // 생일이 아직 안 지났으면 1살 빼기 (만나이)
+  if (birthMonth && birthDay) {
+    const m = now.getMonth() + 1;
+    const d = now.getDate();
+    if (m < birthMonth || (m === birthMonth && d < birthDay)) {
+      age--;
+    }
+  }
 
   if (age < 30) return ageGroups["20대"];
   if (age < 40) return ageGroups["30대"];

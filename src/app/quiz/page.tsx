@@ -110,7 +110,7 @@ export default function QuizPage() {
         const type = calculateSleepType(newAnswers);
         setTimeout(() => {
           router.push(
-            `/loading?type=${type}&name=${encodeURIComponent(name || "당신")}&birthYear=${birthYear}`
+            `/loading?type=${type}&name=${encodeURIComponent(name || "당신")}&birthYear=${birthYear}&birthMonth=${birthMonth}&birthDay=${birthDay}`
           );
         }, 500);
       } else {

@@ -34,7 +34,9 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
 
   const data = sleepTypes[type] || sleepTypes["delayed-hyperarousal"];
   const birthYear = parseInt(searchParams.get("birthYear") || "1995", 10);
-  const ageGroup = getAgeGroup(birthYear);
+  const birthMonth = parseInt(searchParams.get("birthMonth") || "0", 10);
+  const birthDay = parseInt(searchParams.get("birthDay") || "0", 10);
+  const ageGroup = getAgeGroup(birthYear, birthMonth || undefined, birthDay || undefined);
   const personalizedCards = getPersonalizedCards(
     type,
     data.name,

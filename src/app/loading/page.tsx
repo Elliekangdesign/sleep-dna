@@ -20,6 +20,8 @@ function LoadingContent() {
   const type = searchParams.get("type") || "delayed-hyperarousal";
   const name = searchParams.get("name") || "당신";
   const birthYear = searchParams.get("birthYear") || "1995";
+  const birthMonth = searchParams.get("birthMonth") || "0";
+  const birthDay = searchParams.get("birthDay") || "0";
 
   useEffect(() => {
     const timeouts: NodeJS.Timeout[] = [];
@@ -30,14 +32,14 @@ function LoadingContent() {
     });
 
     const nav = setTimeout(() => {
-      router.push(`/result/${type}?name=${encodeURIComponent(name)}&birthYear=${birthYear}`);
+      router.push(`/result/${type}?name=${encodeURIComponent(name)}&birthYear=${birthYear}&birthMonth=${birthMonth}&birthDay=${birthDay}`);
     }, loadingTexts.length * 800 + 1000);
 
     return () => {
       timeouts.forEach(clearTimeout);
       clearTimeout(nav);
     };
-  }, [router, type, name, birthYear]);
+  }, [router, type, name, birthYear, birthMonth, birthDay]);
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
