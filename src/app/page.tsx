@@ -61,7 +61,7 @@ const steps = [
 export default function LandingPage() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <div className="relative z-10 max-w-[430px] mx-auto px-5 py-12">
+      <div className="relative z-10 max-w-[430px] mx-auto px-7 py-12">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -81,7 +81,7 @@ export default function LandingPage() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-[34px] md:text-[44px] leading-[1.4] text-white mb-6"
+            className="text-[42px] md:text-[52px] leading-[1.35] text-white mb-8"
             style={{ fontFamily: "'BMKiranghaerang', sans-serif" }}
           >
             나는 왜 이렇게
@@ -94,7 +94,7 @@ export default function LandingPage() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-[15px] md:text-[16px] text-text-muted leading-[1.8] mb-8 break-keep"
+            className="text-[16px] md:text-[17px] text-text-muted leading-[1.85] mb-10 break-keep"
           >
             <p>
               태어난 날, 태어난 시간 — 그 안에 내가 왜 잠을 못 자는지,
@@ -132,10 +132,12 @@ export default function LandingPage() {
           transition={{ duration: 0.6 }}
           className="mb-24 text-center py-12"
         >
-          <h2 className="text-[22px] md:text-[26px] font-light text-white mb-6 leading-snug break-keep">
-            사주와 별자리는 성격만 말해주는 게 아니에요
+          <h2 className="text-[24px] md:text-[28px] font-bold text-white mb-8 leading-[1.45] break-keep">
+            사주와 별자리는
+            <br />
+            성격만 말해주는 게 아니에요
           </h2>
-          <p className="text-text-muted text-[15px] md:text-base leading-[1.9] max-w-[560px] mx-auto break-keep">
+          <p className="text-text-muted text-[16px] md:text-[17px] leading-[1.9] max-w-[560px] mx-auto break-keep">
             태어난 날의 기운은 내 기질을 만들고, 그 기질은 잠드는 방식,
             깨는 패턴, 회복하는 리듬까지 이어져요.
             <br /><br />
@@ -172,7 +174,7 @@ export default function LandingPage() {
                 className="bg-surface border border-border rounded-2xl p-5"
               >
                 <p className="text-yellow-400 text-xs mb-2">⭐⭐⭐⭐⭐</p>
-                <p className="text-text-base text-sm leading-relaxed mb-3 break-keep">
+                <p className="text-text-base text-[15px] leading-[1.7] mb-3 break-keep">
                   &ldquo;{review.text}&rdquo;
                 </p>
                 <p className="text-text-muted text-xs">— {review.author}</p>

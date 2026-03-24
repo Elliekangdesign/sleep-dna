@@ -73,7 +73,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <div className="relative z-10 max-w-[430px] mx-auto px-5 py-10">
+      <div className="relative z-10 max-w-[430px] mx-auto px-7 py-10">
         {/* Hero Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -172,7 +172,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
                 .map((para, j) => (
                   <p
                     key={j}
-                    className="text-text-base text-sm leading-[1.9] mb-4 last:mb-0 break-keep"
+                    className="text-text-base text-[15px] leading-[1.9] mb-4 last:mb-0 break-keep"
                   >
                     {para}
                   </p>
@@ -267,7 +267,7 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
             {ageGroup.body.split("\n\n").map((para, j) => (
               <p
                 key={j}
-                className="text-text-base text-sm leading-[1.9] mb-4 last:mb-0 break-keep"
+                className="text-text-base text-[15px] leading-[1.9] mb-4 last:mb-0 break-keep"
               >
                 {para}
               </p>

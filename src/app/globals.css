@@ -27,6 +27,18 @@ body {
   background: var(--color-bg);
   color: var(--color-text-base);
   font-family: var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 모바일 기본 텍스트 가독성 */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
 }
 
 ::-webkit-scrollbar {

@@ -137,7 +137,7 @@ export default function QuizPage() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[430px] mx-auto px-5 py-20 min-h-screen flex items-center">
+      <div className="relative z-10 max-w-[430px] mx-auto px-7 py-20 min-h-screen flex items-center">
         <AnimatePresence mode="wait">
           {/* Step 0: Name */}
           {step === 0 && (
