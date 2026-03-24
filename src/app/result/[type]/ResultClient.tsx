@@ -338,6 +338,19 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
           </div>
         </motion.section>
 
+        {/* Retry */}
+        <div className="text-center mb-12">
+          <button
+            onClick={() => {
+              localStorage.removeItem("sleepDnaQuiz");
+              router.push("/");
+            }}
+            className="bg-surface-bright border border-border text-text-base font-medium px-8 py-3.5 rounded-full hover:border-primary/50 transition-all"
+          >
+            다시 하기
+          </button>
+        </div>
+
         {/* Share section */}
         <motion.section
           initial="hidden"
@@ -346,8 +359,8 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
           variants={fadeUp}
           className="mb-12"
         >
-          <h2 className="text-xl font-semibold text-white mb-6 text-center">
-            내 수면 DNA, 친구는 어떨까요?
+          <h2 className="text-xl font-semibold text-white mb-6 text-center break-keep">
+            못 자는 친구에게 공유해주세요
           </h2>
 
           <div className="bg-surface border border-border rounded-2xl p-6 mb-6">
@@ -442,19 +455,6 @@ function ResultContent({ params }: { params: Promise<{ type: string }> }) {
             App Store · Google Play · 무료 체험
           </p>
         </motion.section>
-
-        {/* Retry */}
-        <div className="text-center mb-10">
-          <button
-            onClick={() => {
-              localStorage.removeItem("sleepDnaQuiz");
-              router.push("/");
-            }}
-            className="bg-surface-bright border border-border text-text-base font-medium px-8 py-3.5 rounded-full hover:border-primary/50 transition-all"
-          >
-            다시 하기
-          </button>
-        </div>
 
         {/* Footer */}
         <footer className="text-center text-text-muted text-xs leading-relaxed py-8 border-t border-border">

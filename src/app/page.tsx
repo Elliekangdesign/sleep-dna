@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 
@@ -62,16 +63,21 @@ export default function LandingPage() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       <div className="relative z-10 max-w-[430px] mx-auto px-7 py-12">
-        {/* Logo */}
+        {/* Hero Image */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-20"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 flex justify-center"
         >
-          <span className="font-sans text-xl text-white tracking-wide">
-            🧬 수면 DNA
-          </span>
+          <Image
+            src="/images/cat-logo.jpg"
+            alt="수면 DNA"
+            width={200}
+            height={200}
+            className="rounded-[40px]"
+            priority
+          />
         </motion.div>
 
         {/* Hero */}
